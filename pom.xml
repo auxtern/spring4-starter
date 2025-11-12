@@ -27,6 +27,7 @@
 		<!-- Versi dependency yang digunakan -->
 		<maven.dependency.mockito.version>5.20.0</maven.dependency.mockito.version>
 		<maven.dependency.jakarta.servlet-api.version>6.1.0</maven.dependency.jakarta.servlet-api.version>
+		<maven.dependency.jjwt.version>0.13.0</maven.dependency.jjwt.version>
 	</properties>
 
 	<dependencies>
@@ -57,6 +58,12 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- Dependency for Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+		</dependency>
+
 		<!-- Depedency for mockito -->
 		<dependency>
 			<groupId>org.mockito</groupId>
@@ -83,6 +90,29 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Dependency for JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>${maven.dependency.jjwt.version}</version>
+		</dependency>
+
+		<!-- Dependency for JWT Implementation -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>${maven.dependency.jjwt.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Dependency for JWT Jackson Parser -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>${maven.dependency.jjwt.version}</version>
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
